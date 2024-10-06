@@ -1,8 +1,9 @@
 # ORC-RAMON
 
+
 ## Descrição do Projeto
 
-**ORC-RAMON** é um projeto em desenvolvimento para otimizar o tratamento e análise de dados provenientes de planilhas Excel para a produção do relatório de análise de dados referentes aos múnicipios do estado do Tocantins. Este programa é voltado para estudantes,acadêmicos e docentes que trabalham com dados financeiros e orçamentários, oferecendo uma interface gráfica intuitiva e funcionalidades que facilitam a manipulação e consolidação de informações.
+**ORC-RAMON** é um projeto em desenvolvimento para otimizar o tratamento e análise de dados provenientes de planilhas Excel para a produção do relatório de Análise de Dados referentes aos múnicipios do estado do Tocantins. Este programa é voltado para estudantes, acadêmicos e docentes que trabalham com dados financeiros e orçamentários, oferecendo uma interface gráfica intuitiva e funcionalidades que facilitam a manipulação e consolidação de informações.
 
 ## Objetivos do Projeto
 
@@ -54,7 +55,7 @@ O código do programa é modular, com funções que tratam de cada aspecto do pr
 
 - **3. Exigências de Uso Comercial**: Embora a GPLv3 não proíba explicitamente o uso comercial do software, ela exige que qualquer versão modificada ou derivada que seja distribuída também seja disponibilizada sob a GPLv3. Isso significa que, se uma empresa quiser usar seu software, ela também teria que disponibilizar qualquer modificação sob a mesma licença, o que impede que a empresa o transforme em um produto proprietário sem compartilhar as alterações.
 
-## Consierações aicionais:
+## Consierações adicionais:
 
 - **Objetivo acadêmico**: A GPLv3 é uma escolha adequada se o objetivo é promover a colaboração e o compartilhamento na comunidade acadêmica. Os princípios de software livre e código aberto se alinham bem com a filosofia acadêmica de compartilhamento de conhecimento.
 
