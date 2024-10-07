@@ -7,11 +7,17 @@ import tkinter as tk
 from tkinter import messagebox
 from PIL import Image, ImageTk
 
+# Configurando o caminho do R_HOME
+os.environ['R_HOME'] = r"C:\Program Files\R\R-4.4.1"
+
 # Adicionando o caminho do diretório onde está o módulo
 sys.path.append(r"C:\Users\Acer Aspire\Documents\MeusProjetos\ORC-RAMON\Funcoes Processamento de Dados")
 
 # Importando as funções do módulo
 from data_processing import renomear_planilha, consolidar_dados
+
+# Importando a função de análise
+from r_analysis import executar_analise
 
 def criar_copia(file_path):
     """Cria uma cópia do arquivo Excel na mesma pasta, com um sufixo '_copia'."""
@@ -46,6 +52,12 @@ def selecionar_colunas(file_path):
         root.config(bg='#f0f0f0')
 
         # Carregar e definir o ícone da janela (logo)
+        icon_path = r"C:\Users\Acer Aspire\Documents\MeusProjetos\ORC-RAMON\icon\icon-ui\orc-icon.png"
+        if os.path.exists(icon_path):
+            img = ImageTk.PhotoImage(Image.open(icon_path))
+            root.iconphoto(False, img)
+        else:
+            logging.error(f"ícone não encontrado: {icon_path}")
         img = ImageTk.PhotoImage(Image.open(r"C:\Users\Acer Aspire\Documents\MeusProjetos\ORC-RAMON\icon\icon-ui\orc-icon.png"))
         root.iconphoto(False, img)
 
@@ -161,6 +173,9 @@ if __name__ == "__main__":
             if colunas_excluir:
                 excluir_colunas(renomeada_path, colunas_excluir)
                 consolidar_dados(renomeada_path)
+                
+                # Chama a função de análise e visualização
+                executar_analise(renomeada_path)
             else:
                 logging.error("Nenhuma coluna foi selecionada para exclusão.")
         else:
